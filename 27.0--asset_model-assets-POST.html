@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2026">
+
+
+
+<meta name="description" content="Creates a new asset. An asset contains the following fields:">
+<meta name="keywords" content="/asset_model/assets, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version270_asset_model_intro.html">
+<title>POST /asset_model/assets</title>
+</head>
+<body id="api-27.0--asset_model-assets-POST"><main role="main"><article role="article" aria-labelledby="api-27.0--asset_model-assets-POST__title__1">
+<h1 class="topictitle1" id="api-27.0--asset_model-assets-POST__title__1">POST /asset_model/assets</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/27.0--asset_model-assets-POST.dita" href="https://oxygen.dcs-openshift-cnv.dal.app.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F27.0%2F27.0--asset_model-assets-POST.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Creates a new asset. An asset contains the following fields: </p>
+
+<div class="section refsyn">
+<ul>
+<li><strong>interfaces</strong> - Array - The interfaces on this asset, only one interface is accepted.<ul>
+<li><strong>mac_address</strong> - String - The MAC address of this interface.</li>
+
+<li><strong>ip_address</strong> - Array - Interface is allowed a maximum of two IP addresses, whether IPv4 or
+IPv6, with no provision for more than two addresses.</li>
+
+<li><strong>value</strong> - String - The IP address for this asset is required. At least one valid IP address
+must be configured.</li>
+
+</ul>
+</li>
+
+<li><strong>domain_name</strong> - String - The domain name on this asset.</li>
+
+<li><strong>products</strong> - Array - The products on this asset. Each asset must have at least one value
+specified for the product name, vendor, and version.<ul>
+<li><strong>name</strong> - String - Product name of this asset.</li>
+
+<li><strong>version</strong> - String - Product version of this asset.</li>
+
+<li><strong>vendor</strong> - String - Product vendor of this asset.</li>
+
+</ul>
+</li>
+
+<li><strong>hostnames</strong> - Array - The hostnames on this asset. Asset may be assigned no more than two hostnames.<ul>
+<li><strong>name</strong> - String - Name of hostname on this asset. The hostname for each asset must be
+limited to a maximum of 255 characters.</li>
+
+<li><strong>type</strong> - String - Type of hostname on this asset. Type must be either DNS or NETBIOS and
+can be added once.</li>
+
+</ul>
+</li>
+
+<li><strong>properties</strong> - Array - The property on this asset.<ul>
+<li><strong>name</strong> - String - Name of property on this asset.</li>
+
+<li><strong>value</strong> - String - Value of property on this asset.</li>
+
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /asset_model/assets resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--asset_model-assets-POST__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets request body details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /asset_model/assets request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--asset_model-assets-POST__entry__3" class="thbot">Parameter</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__4" class="thbot">Data Type</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__5" class="thbot">MIME Type</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__6" class="thbot">Description</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__7" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__3 "><p>asset</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__4 "><p>JSON</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__5 "><p>application/json</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__6 "><p>null</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__7 "><p>{
+  "interfaces": [
+    {
+      "mac_address": "mac address",
+      "ip_addresses": [
+        {
+          "value": "1.1.1.1"
+        },
+        {
+          "value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+        }
+      ]
+    }
+  ],
+  "domain_name": "domainname",
+  "properties": [
+    {
+      "name": "property name",
+      "value": "property value"
+    }
+  ],
+  "hostnames": [
+    {
+      "name": "hostname",
+      "type": "DNS"
+    },
+    {
+      "name": "hostname",
+      "type": "NETBIOS"
+    }
+  ],
+  "products": [
+    {
+      "vendor": "Microsoft",
+      "name": "Windows 95",
+      "version": "0.0.0"
+    }
+  ]
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /asset_model/assets response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /asset_model/assets response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--asset_model-assets-POST__entry__13" class="thbot">HTTP Response Code</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__14" class="thbot">Unique Code</th>
+
+<th id="api-27.0--asset_model-assets-POST__entry__15" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>201</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>A new asset is successfully created with asset id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>200</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p></p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>An asset is reconciled with existing asset id.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1001</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>No domain exists with the specified name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1002</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Hostname size should not be greater than 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1003</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Hostname value can either be DNS or NETBIOS and can be added once.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1004</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Hostname type should not be the same.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1005</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Expected at least one value from product, version or vendor.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1006</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Only one product is accepted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1007</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Property 'name' should not be null or empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1008</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Property 'value' should not be null or empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>409</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1009</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>No property exists with the specified name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1010</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Invalid IP address format.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1011</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>IPv6 link local is not allowed.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1012</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>MAC address format is not correct.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1013</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Field cannot be null or empty.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1014</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Only one interface is accepted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--asset_model-assets-POST__entry__13 "><p>422</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__14 "><p>1015</p>
+</td>
+
+<td headers="api-27.0--asset_model-assets-POST__entry__15 "><p>Maximum two IPs are accepted.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-27.0--asset_model-assets-POST__title__5"><h2 class="sectiontitle" id="api-27.0--asset_model-assets-POST__title__5">Response Description</h2>
+
+<p>The newly created asset.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-27.0--asset_model-assets-POST__title__6"><h2 class="sectiontitle" id="api-27.0--asset_model-assets-POST__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "domain_id": 42,
+    "domain_name": "String",
+    "hostnames": [
+        {
+            "created": 42,
+            "first_seen_profiler": 42,
+            "first_seen_scanner": 42,
+            "id": 42,
+            "last_seen_profiler": 42,
+            "last_seen_scanner": 42,
+            "name": "String",
+            "type": "String &lt;one of: DNS, NETBIOS, NETBIOSGROUP&gt;"
+        }
+    ],
+    "id": 42,
+    "interfaces": [
+        {
+            "created": 42,
+            "first_seen_profiler": 42,
+            "first_seen_scanner": 42,
+            "id": 42,
+            "ip_addresses": [
+                {
+                    "created": 42,
+                    "first_seen_profiler": 42,
+                    "first_seen_scanner": 42,
+                    "id": 42,
+                    "last_seen_profiler": 42,
+                    "last_seen_scanner": 42,
+                    "network_id": 42,
+                    "type": "String",
+                    "value": "String"
+                }
+            ],
+            "last_seen_profiler": 42,
+            "last_seen_scanner": 42,
+            "mac_address": "String"
+        }
+    ],
+    "products": [
+        {
+            "first_seen_profiler": 42,
+            "first_seen_scanner": 42,
+            "id": 42,
+            "last_scanned_for": 42,
+            "last_seen_profiler": 42,
+            "last_seen_scanner": 42,
+            "name": "String",
+            "product_variant_id": 42,
+            "vendor": "String",
+            "version": "String"
+        }
+    ],
+    "properties": [
+        {
+            "id": 42,
+            "last_reported": 42,
+            "last_reported_by": "String",
+            "name": "String",
+            "type_id": 42,
+            "value": "String"
+        }
+    ],
+    "risk_score_sum": 42.5,
+    "users": [
+        {
+            "first_seen_profiler": 42,
+            "first_seen_scanner": 42,
+            "id": 42,
+            "last_seen_profiler": 42,
+            "last_seen_scanner": 42,
+            "username": "String"
+        }
+    ],
+    "vulnerability_count": 42
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-27.0--asset_model-assets-POST__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version270_asset_model_intro.html" title="Use the references for REST API 27.0 asset_model endpoints.">asset_model endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

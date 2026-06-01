@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2026">
+
+
+
+<meta name="description" content="Retrieves an disconnected log collector by ID..">
+<meta name="keywords" content="/config/event_sources/disconnected_log_collectors/{id}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="c_rest_api_version270_config_intro.html">
+<title>GET /config/event_sources/disconnected_log_collectors/{id}</title>
+</head>
+<body id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET"><main role="main"><article role="article" aria-labelledby="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__1">
+<h1 class="topictitle1" id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__1">GET /config/event_sources/disconnected_log_collectors/{id}</h1><div style="padding: .5em" class="edit-source-topic"><span class="edit-source-topic" style="font-size: 12px; vertical-align: middle"><a target="_blank" title="/27.0--config-event_sources-disconnected_log_collectors-id-GET.dita" href="https://oxygen.dcs-openshift-cnv.dal.app.cirrus.ibm.com/oxygenxml-web-author/app/oxygen.html?url=gitgh%3A%2F%2Fhttps%253A%252F%252Fgithub.ibm.com%252FQRadarIDD%252FAPI%2Fmaster%2F27.0%2F27.0--config-event_sources-disconnected_log_collectors-id-GET.dita">Edit online</a></span></div>
+
+
+
+<div class="body refbody"><p class="shortdesc">Retrieves an disconnected log collector by ID..</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/disconnected_log_collectors/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/event_sources/disconnected_log_collectors/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__1" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__1 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/disconnected_log_collectors/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/event_sources/disconnected_log_collectors/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__3" class="thbot">Parameter</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__4" class="thbot">Type</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__5" class="thbot">Optionality</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__6" class="thbot">Data Type</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__7" class="thbot">MIME Type</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__8" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__3 "><p>id</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__4 "><p>path</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__5 "><p>Required</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__6 "><p>Number (Integer)</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__8 "><p>The ID of the disconnected log collector to retrieve.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__3 "><p>fields</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__4 "><p>query</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__5 "><p>Optional</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__6 "><p>String</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__7 "><p>text/plain</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__8 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/event_sources/disconnected_log_collectors/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/event_sources/disconnected_log_collectors/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__21" class="thbot">HTTP Response Code</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__22" class="thbot">Unique Code</th>
+
+<th id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__23" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__21 "><p>200</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__22 "><p></p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__23 "><p>The disconnected log collector was retrieved successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__21 "><p>404</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__22 "><p>1001</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__23 "><p>The Disconnected Log Collector was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__21 "><p>500</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__22 "><p>1000</p>
+</td>
+
+<td headers="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__entry__23 "><p>An error occurred during the attempt to retrieve the disconnected log collector.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__5"><h2 class="sectiontitle" id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__5">Response Description</h2>
+
+<div class="p">The disconnected log collector after it is retrieved. A disconnected log collector contains the following fields:
+ <ul>
+ <li><strong>id</strong> - ID - The ID of the disconnected log collector.</li>
+
+ <li><strong>uuid</strong> - UUID - The UUID of the disconnected log collector.</li>
+
+ <li><strong>name</strong> - String - The name of the Disconnected Log Collector.</li>
+
+ <li><strong>description</strong> - String - The description of the Disconnected Log Collector.</li>
+
+ <li><strong>version</strong> - String - The version of the Disconnected Log Collector.</li>
+
+ <li><strong>protocol</strong> - Enumeration - The transport protocol used by the Disconnected Log Collector to send events to QRadar. Possible Values are TLS and UDP.</li>
+
+ <li><strong>status</strong> - Enumeration - The status of the Disconnected Log Collector. Possible Values are: CONNECTION_BUNDLE_PENDING, CONNECTION_BUNDLE_READY, SUCCESS, WARN, ERROR.</li>
+
+ 
+<li><strong>status_detail</strong> - List - The list of the status details of the Disconnected Log Collector, each item contains:
+ <ul>
+   <li><strong>component_name</strong> - Enumeration - The component name of the status. Possible Values are: connection_bundle, event_collection, performance, management, connector_config</li>
+
+   <li><strong>status</strong> - String - The status info defined in the status detail.</li>
+
+      <li><strong>severity</strong> - Enumeration - The severity of the status. Possible Values are: INFO, WARN, ERROR.</li>
+
+      <li><strong>message</strong> - String - The message define in status detail.</li>
+
+      <li><strong>timestamp</strong> - Number - The timestamp in milliseconds since Epoch.</li>
+
+      <li><strong>data</strong> - List - The list of component statuses, each item contains:
+             <ul>
+             <li><strong>key</strong> - String - The key of the component status data object.</li>
+
+             <li><strong>value&gt;</strong> - String - The value of the component status data object.</li>
+
+             </ul>
+
+      </li>
+
+ </ul>
+
+ </li>
+
+
+ <li><strong>creation_time</strong> - Number - The creation time in milliseconds since Epoch.</li>
+
+ <li><strong>modified_time</strong> - Number - The modified time in milliseconds since Epoch.</li>
+
+ <li><strong>managed</strong> - Boolean - The value is set to 'true' when a DLC is registered.</li>
+
+ <li><strong>updates_enabled</strong> - Enumeration - The updates enabled value of the Disconnected Log Collector. Possible Values are NONE, CONFIG_ONLY, CONFIG_AND_SOFTWARE.</li>
+
+ <li><strong>last_event_time</strong> - Number - The last event time in milliseconds since Epoch.</li>
+
+ <li><strong>event_timeout_threshold</strong> -  Number - The event timeout threshold of the Disconnected Log Collector.</li>
+
+ <li><strong>supported_protocol_types</strong> - List - The List of supported protocol types in the Disconnected Log Collector, each item contains:
+   <ul>
+   <li><strong>protocol_type_id</strong> - String - The protocol type id.</li>
+
+      <li><strong>protocol_type_version</strong> - String - The version of the protocol type</li>
+
+      <li><strong>install_failed</strong> - Boolean - This boolean indicates if the installation failed.</li>
+
+   </ul>
+
+ </li>
+
+ <li><strong>client_certificate</strong> - String - The client certificate, either provided during registration or generated.</li>
+
+ <li><strong>public_encryption_keys</strong> - String - The public encryption keys. It is used to encrypt secrets in configurations.</li>
+
+ <li><strong>public_authentication_keys</strong> - String - The public authentication keys.</li>
+
+ <li><strong>host</strong> - String - The host field for storing IP address or hostname of system agent is installed on.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__6"><h2 class="sectiontitle" id="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__6">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "client_certificate": "String",
+    "creation_time": 42,
+    "description": "String",
+    "event_timeout_threshold": 42,
+    "host": "String",
+    "id": 42,
+    "last_event_time": 42,
+    "managed": true,
+    "modified_time": 42,
+    "name": "String",
+    "protocol": "String",
+    "public_authentication_keys": "String",
+    "public_encryption_keys": "String",
+    "status": "String",
+    "status_detail": [
+        {
+            "component_name": "String",
+            "data": [
+                {
+                    "key": "String",
+                    "value": "String"
+                }
+            ],
+            "message": "String",
+            "severity": "String",
+            "status": "String",
+            "timestamp": 42
+        }
+    ],
+    "supported_protocol_types": [
+        {
+            "install_failed": true,
+            "protocol_type_id": 42,
+            "protocol_type_version": "String"
+        }
+    ],
+    "updates_enabled": "String",
+    "uuid": "String",
+    "version": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="api-27.0--config-event_sources-disconnected_log_collectors-id-GET__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version270_config_intro.html" title="Use the references for REST API 27.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
